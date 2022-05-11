@@ -57,7 +57,7 @@ The user should be able to see the list of tasks, add new ones, delete existing 
     <!-- EXERCISE 4
         Create a button "Remove First Task" to trigger the method "removeFirst"
         -->
-        <input type="button" value="Remove First Task">
+        <input type="button" value="Remove First Task" onclick="removeFirst()">
 
     <ul id="myTaskList"></ul>
 
@@ -107,6 +107,13 @@ The user should be able to see the list of tasks, add new ones, delete existing 
       /* EXERCISE 7: 
                 Create a method "removeFirst" which removes the first item from the task list
             */
+           function removeFirst(){
+               let taskListItems2 = document.querySelectorAll('#myTaskList li')
+               if(taskListItems2.length > 0){
+                taskListItems2[0].remove()
+            }
+                
+           }
 
       /* EXERCISE 8: 
                Create a method "getTasksAsArray" which returns, and prints to the console an array containing the tasks as strings
