@@ -51,10 +51,13 @@ The user should be able to see the list of tasks, add new ones, delete existing 
     <!-- EXERCISE 3
         Create a button "Remove Last Task" to trigger the method "removeLast"
         -->
+        <input type="button" value="Remove Last Task" >
+
 
     <!-- EXERCISE 4
         Create a button "Remove First Task" to trigger the method "removeFirst"
         -->
+        <input type="button" value="Remove First Task">
 
     <ul id="myTaskList"></ul>
 
@@ -79,6 +82,13 @@ The user should be able to see the list of tasks, add new ones, delete existing 
                 - Use the document.createElement to create the new List Item
                 - Append the LI child to the UL
             */
+           let newTaskNode = document.getElementById('newTask')
+           function addNewTask() {
+               let uList = document.getElementById('myTaskList')
+               let newTaskList = document.createElement("li")
+               newTaskList.innerText = newTaskNode.value
+               uList.appendChild(newTaskList)
+           }
 
       /* EXERCISE 6: 
                 Create a method "removeLast" which removes the last item from the task list
@@ -94,7 +104,7 @@ The user should be able to see the list of tasks, add new ones, delete existing 
 
       /* EXERCISE 9:
                Create a method "changeTaskBackgroundColor" which takes the color from the color picker with an 
-               onchange event listener ad applies it as background to every list item
+               onchange event listener and applies it as background to every list item
             */
 
       /* EXTRA */
