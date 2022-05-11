@@ -51,7 +51,7 @@ The user should be able to see the list of tasks, add new ones, delete existing 
     <!-- EXERCISE 3
         Create a button "Remove Last Task" to trigger the method "removeLast"
         -->
-        <input type="button" value="Remove Last Task" >
+        <input type="button" value="Remove Last Task" onclick="removeLast()">
 
 
     <!-- EXERCISE 4
@@ -83,16 +83,26 @@ The user should be able to see the list of tasks, add new ones, delete existing 
                 - Append the LI child to the UL
             */
            let newTaskNode = document.getElementById('newTask')
+           let uList = document.getElementById('myTaskList')
+          
+        
            function addNewTask() {
-               let uList = document.getElementById('myTaskList')
-               let newTaskList = document.createElement("li")
+            
+            let newTaskList = document.createElement("li")
                newTaskList.innerText = newTaskNode.value
+               
                uList.appendChild(newTaskList)
            }
-
+           
       /* EXERCISE 6: 
                 Create a method "removeLast" which removes the last item from the task list
-            */
+            */function removeLast(){
+                let taskListItems = document.querySelectorAll('#myTaskList li')
+                if(taskListItems.length > 0){
+                taskListItems[taskListItems.length-1].remove()
+            }
+                
+            }
 
       /* EXERCISE 7: 
                 Create a method "removeFirst" which removes the first item from the task list
