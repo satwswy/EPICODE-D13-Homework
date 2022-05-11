@@ -108,9 +108,9 @@ The user should be able to see the list of tasks, add new ones, delete existing 
                 Create a method "removeFirst" which removes the first item from the task list
             */
            function removeFirst(){
-               let taskListItems2 = document.querySelectorAll('#myTaskList li')
-               if(taskListItems2.length > 0){
-                taskListItems2[0].remove()
+               let taskListItems = document.querySelectorAll('#myTaskList li')
+               if(taskListItems.length > 0){
+                taskListItems[0].remove()
             }
                 
            }
@@ -118,7 +118,12 @@ The user should be able to see the list of tasks, add new ones, delete existing 
       /* EXERCISE 8: 
                Create a method "getTasksAsArray" which returns, and prints to the console an array containing the tasks as strings
             */
-
+           function getTasksAsArray(){
+            let taskListItems = document.querySelectorAll('#myTaskList li')
+            let newArray 
+         
+           }
+           getTasksAsArray();
       /* EXERCISE 9:
                Create a method "changeTaskBackgroundColor" which takes the color from the color picker with an 
                onchange event listener and applies it as background to every list item
